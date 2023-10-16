@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    {% include 'common.html' %}
+    <title>Tim Keller - Data Science</title>
+</head>
+<body class="GradientBackground">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+{% include 'navbar.html' %}
+
+<div class="container pt-4 content mt-5">
+    <div class="row mt-0">
+        <div class="col m-3">
+            <div class="m-5 p-4 NormalText">
+                <h2 class="p-0 Title fs-1 p-0 mb-3">Welcome</h2>
+                Welcome to my virtual living room. Sit down and make yourself at home.
+                Would you'd like a coffee? This place is supposed to be a creative outlet for me and
+                I'll fill it with more and more articles and projects as I go. As I'm writing this,
+                I'm just getting started
+                <br><br>
+                I'm a Data Scientist by trade, but I don't like to be restricted by the label
+                and have projects and  that span the whole programming world.
+                <br><br>
+                <i>Let's see where the journey goes...</i>
+            </div>
+
+            <hr class="border border-danger border-2 opacity-75">
+
+            <div class="m-5 p-4 NormalText">
+                <h2 class="p-0 Title fs-1 p-0 mb-3">my philosophy</h2>
+                Welcome to Tim Keller's Data Science Portfolio,
+                where deep technical expertise meets strategic data applications.
+                Navigate through a rich tapestry of my professional journey, unfolding
+                a decade of experience in leading high-impact data science projects across eminent organizations like RTL Germany and QIMIA. Dive into meticulously curated project showcases, illustrating the practical application of data science and machine learning in resolving real-world challenges, and explore insightful reflections on the intersection of technology, data, and business in my blog. Together, let’s traverse through this analytical journey, unveiling the strategic, transformative power of data.
+            </div>
+
+            <hr class="border border-danger border-2 opacity-75">
+            <span class="link-anchor" id="experience"></span>
+
+
+            <div class="m-5 p-4 NormalText">
+                <h2 class="Title fs-1 mb-3">experience</h2>
+                        <!-- Experience: RTL Germany -->
+                <article>
+                    <div class="row"><div class="col text-left SubTitle">rtl data</div><div class="col-6 text-end SubTitle">lead data scientist</div></div>
+                    <div class="fw-semibold text-left NormalText">2021 - Now</div>
+                    <p>Guided multiple teams in pioneering MLOps practices and led strategic AI projects, including a notable Live TV AI interview project.</p>
+                </article>
+
+                <article>
+                    <div class="row"><div class="col text-left SubTitle">qimia</div><div class="col-6 text-end SubTitle">senior consultant</div></div>
+                    <div class="fw-semibold text-left NormalText">2017 - 2021</div>
+                    <p>Delivered data science and engineering solutions across various client projects, ensuring tailored approaches to meet unique challenges in different sectors.</p>
+                </article>
+
+                <!-- Experience: Henkel -->
+                <article>
+                    <div class="row"><div class="col text-left SubTitle">henkel</div><div class="col-6 text-end SubTitle">senior data scientist</div></div>
+                    <div class="fw-semibold text-left NormalText">2020 - 2021</div>
+                    <p>Refined and enhanced existing classifier and recommender models and infrastructures to streamline operations and enhance predictive accuracy.</p>
+                </article>
+
+                <!-- Experience: ProSiebenSat.1 Media SE -->
+                <article>
+                    <div class="row"><div class="col text-left SubTitle">prosiebensat.1 media</div><div class="col-6 text-end SubTitle">senior data scientist</div></div>
+                    <div class=" fw-semibold text-left NormalText">2019 - 2020</div>
+                    <p>Led data science initiatives to optimize TV ad placement and developed a robust strategy for data science applications on AWS, ensuring alignment with business objectives.</p>
+                </article>
+
+                <!-- Experience: Telefonica Germany -->
+                <article>
+                    <div class="row"><div class="col text-left SubTitle">telefonica germany</div><div class="col-6 text-end SubTitle">ml engineer</div></div>
+                    <div class="fw-semibold text-left NormalText">2017–2019</div>
+                    <p>Developed and continuously enhanced a high-volume time series anomaly detection platform, while fostering improved code practices through the introduction of Git, CI, Unit Tests, and Technical Debt Management.</p>
+                </article>
+
+                <p class="SubTitle">technical skills</p>
+
+                <strong>Programming Languages:</strong> Expert: Python / SQL, Intermediate: Scala / Java<br>
+                <strong>Data Science:</strong> Keras, Tensorflow, Catboost, Scikit-Learn, Implicit, Jupyter<br>
+                <strong>Statistics:</strong> Hypothesis Testing,  Error Calculus, A/B Testing<br>
+                <strong>MLOps:</strong> Kubeflow, MLFlow, Katib, Great Expectations<br>
+                <strong>Data Engineering:</strong> Linux, Spark, Kafka, OracleDB, Docker, Airflow<br>
+                <strong>Cloud:</strong> GCP, AWS<br>
+                <strong>Visualisation:</strong> Plotly, Matplotlib, Seaborn,  Streamlit, Tableau, PowerBI<br>
+                <strong>Software Development:</strong> PyCharm, Git, Git-Flow, TDD, CI / CD, Code Reviews, Scrum, Technical Debt Management<br>
+                <strong>Web:</strong> FastAPI, Flask, Bootstrap, HTML, CSS<br>
+                <strong>Languages:</strong> Fluent: German and English, Basic: Spanish<br>
+
+            </div>
+
+            <hr class="border border-danger border-2 opacity-75">
+            <span class="link-anchor" id="examples"></span>
+
+            <div class="m-5 p-4 NormalText">
+                <h2 class="Title">examples</h2>
+                <div class="container mt-5">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="{{ url_for('static', filename='images/placeholder.png') }}" class="card-img-top" alt="Image Alt Text">
+                                <div class="card-body">
+                                    <h5 class="card-title">Raytracer</h5>
+                                    <p class="card-text">Why would you use python for a raytracer? Why not?</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="{{ url_for('static', filename='images/placeholder.png') }}" class="card-img-top" alt="Image Alt Text">
+                                <div class="card-body">
+                                    <h5 class="card-title">Adversarial Networks</h5>
+                                    <p class="card-text">Using GANs to play games. Which games? I don't know yet.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="{{ url_for('static', filename='images/placeholder.png') }}" class="card-img-top" alt="Image Alt Text">
+                                <div class="card-body">
+                                    <h5 class="card-title">MLOPs</h5>
+                                    <p class="card-text">A template for using MLOps in projects. Includes logging and CI / CD.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

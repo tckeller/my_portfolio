@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "my-portfolio"
+version = "0.1.0"
+description = "Portfolio showcasing my expertise"
+authors = ["Tim Keller"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.10"
+pandas = "^1.0.0"
+Flask = "^3.0.0"
+Pandas3 = "^0.0.1"
+mistune = "^3.0.2 "
+markdown = "^3.5"
+Pygments = "^2.16.1"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

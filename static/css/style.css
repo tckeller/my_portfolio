@@ -1,0 +1,66 @@
+.GradientBackground {
+    background: rgb(255,255,255);
+    background: -webkit-radial-gradient(circle at center, rgba(255,255,255,1) 0%, rgba(238,238,238,0.5) 200%);
+    background: -moz-radial-gradient(circle at center, rgba(255,255,255,1) 0%, rgba(238,238,238,0.5) 200%);
+    background: radial-gradient(circle at center, rgba(255,255,255,1) 0%, rgba(238,238,238,1) 130%);
+}
+
+body::before {
+    content: '';
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px; /* Adjust according to the height of your navbar */
+    background: rgb(255,255,255);
+    background: -webkit-radial-gradient(circle at center, rgba(255,255,255,1) 0%, rgba(238,238,238,1) 200%);
+    background: -moz-radial-gradient(circle at center, rgba(255,255,255,1) 0%, rgba(238,238,238,1) 200%);
+    background: radial-gradient(circle at center, rgba(255,255,255,1) 0%, rgba(238,238,238,1) 130%);
+    z-index: 1000;
+}
+
+.codehilite {
+    border-radius: 8px;   /* Adjust as needed */
+    overflow: hidden;     /* This will ensure that the rounded corners are applied properly */
+}
+
+.codehilite pre {
+    padding: 15px;        /* Adjust as needed */
+    border-radius: 8px;   /* Adjust as needed */
+}
+
+.link-anchor{
+   display:block;
+   height:100px; /* this is the height of your header */
+   margin-top:-100px; /* this is again negative value of the height of your header */
+   visibility:hidden;
+}
+
+.LightBlueBackground {
+    background: rgba(0, 21, 54, 1);
+}
+
+.WhiteBackground {
+    background: rgba(244,255,255, 1);
+}
+
+.Title {
+    font-family: 'Major Mono Display', monospace;
+    font-size: 50px;
+    font-style: bold;
+    margin-bottom: 0;
+    margin-right: 0px;
+    line-height: 80%;
+}
+
+.SubTitle {
+    font-family: 'Major Mono Display', monospace;
+    font-size: 22px;
+    font-style: italic;
+}
+
+.NormalText {
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+}
