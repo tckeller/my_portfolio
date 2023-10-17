@@ -25,7 +25,7 @@
                 <i>Let's see where the journey goes...</i>
             </div>
 
-            <hr class="border border-danger border-2 opacity-75">
+            <hr class="border border-primary border-2 opacity-50">
 
             <div class="m-5 p-4 NormalText">
                 <h2 class="p-0 Title fs-1 p-0 mb-3">my philosophy</h2>
@@ -35,7 +35,19 @@
                 a decade of experience in leading high-impact data science projects across eminent organizations like RTL Germany and QIMIA. Dive into meticulously curated project showcases, illustrating the practical application of data science and machine learning in resolving real-world challenges, and explore insightful reflections on the intersection of technology, data, and business in my blog. Together, let’s traverse through this analytical journey, unveiling the strategic, transformative power of data.
             </div>
 
-            <hr class="border border-danger border-2 opacity-75">
+            <hr class="border border-success border-2 opacity-50">
+
+            <div class="m-5 p-4 NormalText">
+                <h2 class="p-0 Title fs-1 p-0 mb-3">recent articles</h2>
+                {% for article_name in article_names %}
+                <a href="/blog/article?article_name={{ article_name.2 }}" class="blog-link mb-3 text-decoration-none text-dark">
+                    <div class="row mt-4 mb-0"><div class="col text-left NormalText">{{ article_name.1 }}</div><div class="col-6 me-3 text-end NormalText">{{ article_name.0 }}</div></div>
+                    <hr class="border border-black border-1 mt-0 opacity-75">
+                </a>
+                {% endfor %}
+            </div>
+
+            <hr class="border border-info border-2 opacity-25">
             <span class="link-anchor" id="experience"></span>
 
 
@@ -90,11 +102,11 @@
 
             </div>
 
-            <hr class="border border-danger border-2 opacity-75">
+            <hr class="border border-danger border-2 opacity-25">
             <span class="link-anchor" id="examples"></span>
 
             <div class="m-5 p-4 NormalText">
-                <h2 class="Title">examples</h2>
+                <h2 class="Title">recent projects</h2>
                 <div class="container mt-5">
                     <div class="row">
                         <div class="col-md-4">

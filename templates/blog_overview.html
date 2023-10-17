@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% include 'common.html' %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/pygments.css') }}">
+    <title>Tim Keller - Blog</title>
+</head>
+<body class="GradientBackground">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    {% include 'navbar.html' %}
+    <div class="mt-5">x</div>
+    <div class="container pt-4 content">
+        <div class="row mt-0">
+            <div class="col m-3">
+                <div class="m-2 p-4 NormalText">
+                    <div class="row">
+                        <h2 class="p-0 Title fs-1 p-0 mb-3 col">blog articles</h2>
+                        <input type="text" id="articleSearch" onkeyup="articleSearchFunction()" placeholder="Search for articles..." class="form-control w-50 col">
+                    </div>
+                    <hr class="border border-success border-2 opacity-50">
+                    {% for article_name in article_names %}
+                    <a href="/blog/article?article_name={{ article_name.2 }}" class="blog-link mb-3 text-decoration-none text-dark">
+                            <div class="row mt-4 mb-0 ms-5"><div class="col text-left NormalText">{{ article_name.1 }}</div><div class="col-6 me-3 text-end NormalText">{{ article_name.0 }}</div></div>
+                            <hr class="border border-black border-1 mt-0 ms-3 opacity-75">
+                    </a>
+                    {% endfor %}
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script>
+function articleSearchFunction() {
+    // Get the input element and its value (the search query)
+    var input = document.getElementById('articleSearch');
+    var filter = input.value.toUpperCase(); // Case-insensitive search
+
+    // Get the container that holds your articles
+    var articleContainer = document.getElementsByClassName('content')[0]; // Assuming "content" class is where your articles are
+
+    // Get all the articles
+    var articles = articleContainer.getElementsByClassName('blog-link');
+
+    // Loop through the articles and hide those that don't match the search query
+    for (var i = 0; i < articles.length; i++) {
+        var title = articles[i].getElementsByClassName('NormalText')[0]; // Assuming "NormalText" class is where your article titles are
+        if (title) {
+            var textValue = title.textContent || title.innerText;
+            if (textValue.toUpperCase().indexOf(filter) > -1) {
+                articles[i].style.display = "";
+            } else {
+                articles[i].style.display = "none";
+            }
+        }
+    }
+}
+</script>
+
+
+</body>
+</html>
