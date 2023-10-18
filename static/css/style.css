@@ -71,3 +71,25 @@ body::before {
     font-family: 'Raleway', sans-serif;
     font-size: 20px;
 }
+
+.gradient_ruler {
+  /* background: linear-gradient(to right, red, yellow); */
+  background: linear-gradient(to right, #85c1e9,  #FF5733 );
+  height: 8px;
+  border-top: white;
+}
+
+.inverse_gradient_ruler {
+  /* background: linear-gradient(to right, red, yellow); */
+  background: linear-gradient(to right, #FF5733, #85c1e9);
+  height: 8px;
+  border-top: white;
+}
+
+.nav-link {
+  transition: all 3s ease-in-out;
+}
+
+.nav-link:hover, .nav-link:focus {
+  text-decoration: underline;
+}

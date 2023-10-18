@@ -12,6 +12,9 @@ def home():
 
     return render_template("landing_page.html", article_names=recent_articles)
 
+@app.route("/aboutme")
+def about_me():
+    return render_template("about_me.html")
 
 @app.route("/blog/article")
 def blog_article():
@@ -36,7 +39,6 @@ def articles():
     article_dir = (Path(__file__).parent / "static" / "blog_articles")
 
     def split_name(filename: Path):
-        print(filename.name)
         release_date, name = filename.name.split("_")
         return release_date, name[:-3].replace("-", " "), filename
 

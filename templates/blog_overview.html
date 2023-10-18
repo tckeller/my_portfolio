@@ -18,7 +18,7 @@
                         <h2 class="p-0 Title fs-1 p-0 mb-3 col">blog articles</h2>
                         <input type="text" id="articleSearch" onkeyup="articleSearchFunction()" placeholder="Search for articles..." class="form-control w-50 col">
                     </div>
-                    <hr class="border border-success border-2 opacity-50">
+                    <hr class="gradient_ruler">
                     {% for article_name in article_names %}
                     <a href="/blog/article?article_name={{ article_name.2 }}" class="blog-link mb-3 text-decoration-none text-dark">
                             <div class="row mt-4 mb-0 ms-5"><div class="col text-left NormalText">{{ article_name.1 }}</div><div class="col-6 me-3 text-end NormalText">{{ article_name.0 }}</div></div>
