@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     {% include 'common.html' %}
     <link rel="stylesheet" href="{{ url_for('static', filename='css/pygments.css') }}">
+    <script src="{{ url_for('static', filename='js/search.js') }}"></script>
     <title>Tim Keller - Blog</title>
 </head>
 <body class="GradientBackground">
@@ -20,44 +21,14 @@
                     </div>
                     <hr class="gradient_ruler">
                     {% for article_name in article_names %}
-                    <a href="/blog/article?article_name={{ article_name.2 }}" class="blog-link mb-3 text-decoration-none text-dark">
-                            <div class="row mt-4 mb-0 ms-5"><div class="col text-left NormalText">{{ article_name.1 }}</div><div class="col-6 me-3 text-end NormalText">{{ article_name.0 }}</div></div>
+                    <a href="/blog/article?article_name={{ article_name.2 }}" class="searched_element blog-link mb-3 text-decoration-none text-dark">
+                            <div class="row mt-4 mb-0 ms-5"><div class="searched_name col text-left NormalText">{{ article_name.1 }}</div><div class="col-6 me-3 text-end NormalText">{{ article_name.0 }}</div></div>
                             <hr class="border border-black border-1 mt-0 ms-3 opacity-75">
                     </a>
                     {% endfor %}
-
                 </div>
             </div>
         </div>
     </div>
-
-<script>
-function articleSearchFunction() {
-    // Get the input element and its value (the search query)
-    var input = document.getElementById('articleSearch');
-    var filter = input.value.toUpperCase(); // Case-insensitive search
-
-    // Get the container that holds your articles
-    var articleContainer = document.getElementsByClassName('content')[0]; // Assuming "content" class is where your articles are
-
-    // Get all the articles
-    var articles = articleContainer.getElementsByClassName('blog-link');
-
-    // Loop through the articles and hide those that don't match the search query
-    for (var i = 0; i < articles.length; i++) {
-        var title = articles[i].getElementsByClassName('NormalText')[0]; // Assuming "NormalText" class is where your article titles are
-        if (title) {
-            var textValue = title.textContent || title.innerText;
-            if (textValue.toUpperCase().indexOf(filter) > -1) {
-                articles[i].style.display = "";
-            } else {
-                articles[i].style.display = "none";
-            }
-        }
-    }
-}
-</script>
-
-
 </body>
 </html>
