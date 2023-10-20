@@ -17,12 +17,15 @@ html {
     background: rgb(255,255,255);
     background: -webkit-radial-gradient(circle at center, rgba(255,255,255,1) 0%, rgba(238,238,238,0.5) 200%);
     background: -moz-radial-gradient(circle at center, rgba(255,255,255,1) 0%, rgba(238,238,238,0.5) 200%);
-    background: radial-gradient(circle at center, rgb(49, 105, 135) 0%,rgb(220, 255, 189) 200%);
+    background: radial-gradient(circle at center, rgb(49, 105, 135) 0%,rgb(220, 255, 189) 400%);
 }
 
 .navbar {
-    background:  rgba(245,245,245,1);
+    /*background:  rgba(245,245,245,1);*/
+    background: white;
+    border-bottom: 3px;
     z-index: 1000;
+    height: 80px;
 }
 
 .blog-link {
@@ -81,15 +84,16 @@ html {
 
 .gradient_ruler {
   /* background: linear-gradient(to right, red, yellow); */
-  background: #ffffff;
-  height: 8px;
-  border-top: white;
+  background: #42778b;
+  height: 12px;
+  width: 100%;
+  margin: auto;
   opacity: 1;
 }
 
 .inverse_gradient_ruler {
   /* background: linear-gradient(to right, red, yellow); */
-  background: linear-gradient(to right, #FF5733, #85c1e9);
+  background: rgb(49, 105, 135);
   height: 8px;
   border-top: white;
 }
