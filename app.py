@@ -11,8 +11,8 @@ app = Flask(__name__)
 @app.route("/")
 def home():
     recent_articles = list(articles())[-3:]
-
-    return render_template("landing_page.html", article_names=recent_articles)
+    examples = read_examples_meta()
+    return render_template("landing_page.html", article_names=recent_articles, examples=examples)
 
 
 @app.route("/aboutme")
@@ -56,7 +56,7 @@ def articles():
 def read_examples_meta():
     with open("resources/projects_meta.csv", "r") as csvfile:
         csvreader = csv.reader(csvfile, delimiter=';', quotechar='"')
-        return list(csvreader)
+        return list(csvreader)[1:]
 
 
 if __name__ == "__main__":

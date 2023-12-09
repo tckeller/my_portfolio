@@ -13,6 +13,11 @@ html {
     transform: scale(1.05);
 }
 
+a.card-link-no-style, .card-link-no-style a {
+    text-decoration: none; /* Removes underline */
+    color: inherit; /* Inherits the color from the parent element */
+}
+
 .GradientBackground {
     background: rgb(255,255,255);
     background: -webkit-radial-gradient(circle at center, rgba(255,255,255,1) 0%, rgba(238,238,238,0.5) 200%);

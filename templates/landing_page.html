@@ -51,36 +51,20 @@
             <span class="link-anchor" id="examples"></span>
 
             <div class="m-md-5 p-4 NormalText">
-                <h2 class="Title">recent projects</h2>
+                <h2 class="p-0 Title fs-1 mb-3">recent projects</h2>
                 <div class="container mt-5">
-                    <div class="row">
-                        <div class="col-md-4 pb-3">
-                            <div class="card">
-                                <img src="{{ url_for('static', filename='images/placeholder.png') }}" class="card-img-top" alt="Image Alt Text">
-                                <div class="card-body">
-                                    <h5 class="card-title">Raytracer</h5>
-                                    <p class="card-text">Why would you use python for a raytracer? Why not?</p>
+                    <div class="row row-cols-1 row-cols-md-3 g-4">
+                        {% for example in examples %}
+                            <a href="{{ example.0 }}" class="card-link-no-style col-md-4 searched_element">
+                                <div class="card">
+                                    <img src="{{ url_for('static', filename=example.4) }}" class="card-img-top" alt="Image Alt Text">
+                                    <div class="card-body">
+                                        <h5 class="card-title searched_name ">{{ example.1 }}</h5>
+                                        <p class="card-text">{{ example.2 }}</p>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 pb-3">
-                            <div class="card">
-                                <img src="{{ url_for('static', filename='images/placeholder.png') }}" class="card-img-top" alt="Image Alt Text">
-                                <div class="card-body">
-                                    <h5 class="card-title">Adversarial Networks</h5>
-                                    <p class="card-text">Using GANs to play games. Which games? I don't know yet.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 pb-3">
-                            <div class="card">
-                                <img src="{{ url_for('static', filename='images/placeholder.png') }}" class="card-img-top" alt="Image Alt Text">
-                                <div class="card-body">
-                                    <h5 class="card-title">MLOPs</h5>
-                                    <p class="card-text">A template for using MLOps in projects. Includes logging and CI / CD.</p>
-                                </div>
-                            </div>
-                        </div>
+                            </a>
+                        {% endfor %}
                     </div>
                 </div>
             </div>
