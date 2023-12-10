@@ -3,6 +3,10 @@ import mistune
 from pathlib import Path
 import markdown
 import csv
+import re
+import os
+os.environ['FLASK_ENV'] = 'production'
+
 
 app = Flask(__name__)
 
@@ -11,6 +15,7 @@ app = Flask(__name__)
 @app.route("/")
 def home():
     recent_articles = list(articles())[-3:]
+    print(recent_articles)
     examples = read_examples_meta()
     return render_template("landing_page.html", article_names=recent_articles, examples=examples)
 
@@ -20,12 +25,24 @@ def about_me():
     return render_template("about_me.html")
 
 
+def safe_article_path(article_name):
+    base_path = Path(__file__).parent / "static" / "blog_articles"
+    target_path = base_path / (article_name + ".md")
+    # Ensure the target path is within the base_path directory
+    return target_path if target_path.resolve().parent == base_path.resolve() else None
+
+
 @app.route("/blog/article")
 def blog_article():
     article_name = request.args.get('article_name')
 
-    with open(Path(__file__).parent / "static" / "blog_articles" / (article_name), "r") as article_file:
-        article_string = article_file.read()
+    safe_path = safe_article_path(article_name)
+
+    try:
+        with open(safe_path, "r") as article_file:
+            article_string = article_file.read()
+    except FileNotFoundError:
+        return blog()
 
     article_html = markdown.markdown(article_string, extensions=['fenced_code', 'codehilite'])
     return render_template("blog_article.html", article_html=article_html)
@@ -46,8 +63,8 @@ def articles():
     article_dir = (Path(__file__).parent / "static" / "blog_articles")
 
     def split_name(filename: Path):
-        release_date, name = filename.name.split("_")
-        return release_date, name[:-3].replace("-", " "), filename
+        release_date, name = filename.stem.split("_", 1)  # Using stem to exclude the file extension
+        return release_date, name.replace("-", " "), filename.stem
 
     article_names = map(split_name, list(article_dir.iterdir()))
     return article_names
