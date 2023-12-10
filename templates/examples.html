@@ -22,15 +22,15 @@
                     <div class="container mt-5">
                         <div class="row row-cols-1 row-cols-md-3 g-4">
                             {% for example in examples %}
-                            <div class="col-md-4 searched_element">
-                                <div class="card ">
+                            <a href="{{ example.0 }}" class="card-link-no-style col-md-4 searched_element">
+                                <div class="card">
                                     <img src="{{ url_for('static', filename=example.4) }}" class="card-img-top" alt="Image Alt Text">
                                     <div class="card-body">
-                                        <h5 class="card-title searched_name">{{ example.1 }}</h5>
+                                        <h5 class="card-title searched_name ">{{ example.1 }}</h5>
                                         <p class="card-text">{{ example.2 }}</p>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                             {% endfor %}
                         </div>
                     </div>
