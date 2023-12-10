@@ -14,7 +14,7 @@
         <div class="row mt-0">
             <div class="col m-md-3 bg-white rounded m-2 shadow p-0">
                 <div class="row m-5 align_title_and_search">
-                    <h2 class="p-0 Title fs-1 mtb-3 col">projects</h2>
+                    <h2 class="p-0 Title fs-1 mtb-3 me-3 col">projects</h2>
                     <input type="text" id="articleSearch" onkeyup="articleSearchFunction()" placeholder="Search for projects..." class="form-control w-50 col">
                 </div>
                 <hr class="gradient_ruler m-0 p-0">
@@ -22,7 +22,7 @@
                     <div class="container mt-5">
                         <div class="row row-cols-1 row-cols-md-3 g-4">
                             {% for example in examples %}
-                            <a href="{{ example.0 }}" class="card-link-no-style col-md-4 searched_element">
+                            <a href="{{ example.0 }}" class="text-decoration-none col-md-4 searched_element">
                                 <div class="card">
                                     <img src="{{ url_for('static', filename=example.4) }}" class="card-img-top" alt="Image Alt Text">
                                     <div class="card-body">
