@@ -562,6 +562,20 @@ files = [
 six = ">=1.5"
 
 [[package]]
+name = "python-markdown-math"
+version = "0.8"
+description = "Math extension for Python-Markdown"
+optional = false
+python-versions = ">=3.6"
+files = [
+    {file = "python-markdown-math-0.8.tar.gz", hash = "sha256:8564212af679fc18d53f38681f16080fcd3d186073f23825c7ce86fadd3e3635"},
+    {file = "python_markdown_math-0.8-py3-none-any.whl", hash = "sha256:c685249d84b5b697e9114d7beb352bd8ca2e07fd268fd4057ffca888c14641e5"},
+]
+
+[package.dependencies]
+Markdown = ">=3.0"
+
+[[package]]
 name = "pytz"
 version = "2023.3.post1"
 description = "World timezone definitions, modern and historical"
@@ -658,4 +672,4 @@ watchdog = ["watchdog (>=2.3)"]
 [metadata]
 lock-version = "2.0"
 python-versions = "==3.12.0"
-content-hash = "8023a2a72d6897980855319f72ffc609ac707adb3fca126c84fa358dea340bd0"
+content-hash = "cef50abb77105c66c6c61b7513327c4236e8af8c4ebb62a9f678c5d28224ffea"

@@ -20,6 +20,10 @@ html {
     background: radial-gradient(circle at center, rgb(49, 105, 135) 0%,rgb(220, 255, 189) 400%);
 }
 
+table {
+   .table;
+}
+
 .navbar {
     /*background:  rgba(245,245,245,1);*/
     background: white;
