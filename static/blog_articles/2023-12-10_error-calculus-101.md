@@ -1,6 +1,10 @@
 Error Calculus 101
 ==================
 
+Table of Contents
+-----------------
+[TOC]
+
 Introduction. What is the point of error calculus
 -------------------------------------------------
 
@@ -19,8 +23,8 @@ But things get worse if the change you see is not significant. Then you might as
 
 _we tried the new feature but the dog ate our results_
 
-Not 100% accurate but you get the point. Insignificant results are the same as saying that we don't 
-know if the model improved or not. 
+Not 100% accurate but you get the point. Insignificant results essentially mean that we cannot 
+confirm whether the model improved or not.
 
 Now imagine I instead come to you and tell you:
 
@@ -36,9 +40,11 @@ I hope I convinced you to keep reading, so let's start with the basics.
 What are confidence intervals?
 ------------------------------
 
-Pretty simple. If you are measuring something that follows a distribution, then you can devine 
+Pretty simple. If you are measuring something that follows a distribution, then you can define 
 a range in which X% of measurements will fall into. The most common Confidence interval is the 95% 
 CL, but in physics, we usually used the 68% CL. 
+
+<img src="/static/article_images/gaussian.png" alt="Gaussian Distribution" width="100%"/>
 
 If you know your distributions, you'll know that these levels correspond to 1 and 2 standard deviations 
 of the gauss distribution. So if we know the distribution of the thing we are measuring, we could produce something
@@ -60,19 +66,19 @@ Of course not everything you're measuring is gaussian, but if you're measuring a
 that isn't a kind of counting experiment, then the approximation is good enough most of the time. 
 
 If you're building a nuclear power plant maybe don't listen to this advice. But often the 
-question isn't assume a gaussian distribution or properly calculate the distribution, but 
+question isn't whether to assume a Gaussian distribution or properly calculate the distribution, but 
 make a simple error calculation or not produce uncertainties at all, so here we'll assume 
 that everything we measure follows a gaussian distribution and that will lead to simple rules
 that we can apply everywhere without adding much work to the process. 
 
-It's a simple question of cost an benefit. So let's see what we can do. 
+It's a simple question of cost and benefit. So let's see what we can do. 
 
 A simple experiment
 -------------------
 
 Back to our experimentation of adding feature X to our ficticious ML model.
-To investigate the if the new feature helps things we run the model twice, one with 
-the feature enabled and once without. This are the results:
+To investigate if the new feature helps things we run the model twice, one with 
+the feature enabled and once without. These are the results:
 
 | Model | Without X | With X |
 |-------|:---------:|:------:|
@@ -96,7 +102,7 @@ test set. The output looks as follows:
 | Score |  2.8   |    3.0    |
 
 Suddenly the difference doesn't look as cotton dry anymore. Let's do the math. 
-The thing which interests uns now across all those experiments is how each model
+The thing that interests us now across all those experiments is how each model
 performs on average, let's estimate the distribution by calculating the mean and standard deviation.
 
 | Model | Without X | With X |
@@ -156,8 +162,8 @@ Error Propagation
 -----------------
 
 Error propagation is the process of calculating the error on a variable that is calculated from a set of 
-other variables with errors attached to them. Let's saz we have a variable \(x\) with uncertainty \(\sigma_{x}\).
-and we would like to calculate the uncertainty \(y=f(x)\). In principle what we would need to do is to apply the function 
+other variables with errors attached to them. Let's say we have a variable \(x\) with uncertainty \(\sigma_{x}\).
+and we would like to calculate the uncertainty \(y=f(x)\). In principle what we would need to do is to apply the function
 \(f\) to any value that x could take according to its distribution, see what distribution that would produce and then calculate 
 the uncertainty from that. But we can simplify by assuming that f is close to linear in a small area around the mean value of x which we call \(\ \mu_x ). 
 (First order Taylor expansion). The proof in 1 d goes as follows. 
@@ -232,7 +238,7 @@ and put them into a ufloat, then you can stop worrying about the uncertainties a
 Conclusion
 ----------
 
-I hope I maged to give you a little bit of an introduction into uncertainties and gave you enough tools to get started. 
+I hope I managed to give you a little bit of an introduction into uncertainties and gave you enough tools to get started. 
 In short, the key points are:
 
 1. Do any experiment multiple times and calculate the standard deviation. 

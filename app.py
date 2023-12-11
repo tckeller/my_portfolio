@@ -44,7 +44,7 @@ def blog_article():
     except FileNotFoundError:
         return blog()
 
-    article_html = markdown.markdown(article_string, extensions=['fenced_code', 'codehilite', 'tables', 'mdx_math'])
+    article_html = markdown.markdown(article_string, extensions=['fenced_code', 'codehilite', 'tables', 'mdx_math', 'toc'])
     return render_template("blog_article.html", article_html=article_html)
 
 @app.route("/examples")

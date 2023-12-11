@@ -22,8 +22,8 @@
                 <hr class="gradient_ruler">
                 <div class="m-md-5 p-4 NormalText">
                     {% for article_name in article_names %}
-                    <a href="/blog/article?article_name={{ article_name.2 }}" class="searched_element blog-link mb-3 text-decoration-none text-dark card card-body bg-white">
-                        <div class="row mb-0"><div class="col text-left NormalText searched_name">{{ article_name.1 }}</div><div class="col-6 me-3 text-end NormalText">{{ article_name.0 }}</div></div>
+                    <a href="/blog/article?article_name={{ article_name.2 }}" class="searched_element blog-link mb-3 shadow-sm outline-1 border-dashed text-decoration-none text-dark card card-body bg-white">
+                        <div class="row mb-0"><div class="col text-left SubTitle searched_name">{{ article_name.1 }}</div><div class="col-3 me-3 text-end NormalText">{{ article_name.0 }}</div></div>
                     </a>
                     {% endfor %}
                 </div>
