@@ -15,9 +15,9 @@ html {
 
 .GradientBackground {
     background: rgb(255,255,255);
-    background: -webkit-radial-gradient(circle at center, rgba(255,255,255,1) 0%, rgba(238,238,238,0.5) 200%);
-    background: -moz-radial-gradient(circle at center, rgba(255,255,255,1) 0%, rgba(238,238,238,0.5) 200%);
-    background: radial-gradient(circle at center, rgb(49, 105, 135) 0%,rgb(220, 255, 189) 400%);
+    background: -webkit-radial-gradient(circle at center, rgb(180, 213, 217) 0%, rgb(255,255,255) 400%);
+    background: -moz-radial-gradient(circle at center, rgb(180, 213, 217) 0%, rgb(255,255,255) 400%);
+    background: radial-gradient(circle at center, rgb(180, 213, 217) 0%, rgb(255,255,255) 400%);
 }
 
 table {
@@ -94,7 +94,8 @@ table {
 
 .gradient_ruler {
   /* background: linear-gradient(to right, red, yellow); */
-  background: #42778b;
+  background: #B4D5D9;
+  border: 0px solid white;
   height: 12px;
   width: 100%;
   margin: auto;
