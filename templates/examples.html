@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    {% include 'common.html' %}
+    {% include 'components/header.html' %}
     <link rel="stylesheet" href="{{ url_for('static', filename='css/pygments.css') }}">
     <script src="{{ url_for('static', filename='js/search.js') }}"></script>
     <title>Tim Keller - Projects</title>
@@ -10,8 +10,11 @@
 </head>
 <body class="GradientBackground">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    {% include 'navbar.html' %}
-    <div class="container pt-4 content">
+    {% include 'components/navbar.html' %}
+    {% include 'components/parallax_background.html' %}
+
+
+    <div class="container pt-1 content">
         <div class="row mt-0">
             <div class="col m-md-3 bg-white rounded m-2 shadow p-0">
                 <div class="row m-5 align_title_and_search">

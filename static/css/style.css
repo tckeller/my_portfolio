@@ -13,6 +13,34 @@ html {
     transform: scale(1.05);
 }
 
+.fixed_image {
+    position: fixed;
+    z-index: -1;
+    opacity: 0.7;
+    transform: scale(2) rotate(-10deg) translateY(-0px)
+}
+
+.background_plot {
+    top: 1000px;    /* Adjust as needed */
+    left: 350px;  /* Adjust as needed */
+}
+
+.background_nn {
+    top: 300px;    /* Adjust as needed */
+    left: 100px;  /* Adjust as needed */
+}
+
+.background_tree {
+    top: 100px;    /* Adjust as needed */
+    right: 100px;  /* Adjust as needed */
+    transform: scale(2) rotate(30deg) translateY(-0px)
+}
+
+.background_atom {
+    top: 1100px;    /* Adjust as needed */
+    right: 350px;  /* Adjust as needed */
+}
+
 .GradientBackground {
     background: rgb(255,255,255);
     background: -webkit-radial-gradient(circle at center, rgb(180, 213, 217) 0%, rgb(255,255,255) 400%);
