@@ -27,7 +27,7 @@
                         <div class="row row-cols-1 row-cols-md-3 g-4">
                             {% for example in examples %}
                             <a href="{{ example.0 }}" class="text-decoration-none col-md-4 searched_element">
-                                <div class="card">
+                                <div class="card shadow border-0">
                                     <img src="{{ url_for('static', filename=example.4) }}" class="card-img-top" alt="Image Alt Text">
                                     <div class="card-body">
                                         <h5 class="card-title searched_name ">{{ example.1 }}</h5>
