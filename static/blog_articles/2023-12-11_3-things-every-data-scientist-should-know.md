@@ -63,6 +63,9 @@ might help. Talk to your stakeholders often. They know much better than you what
 
 Of course often you do end up needing some kind of model, but don't be the hammer that sees everything as a nail.
 
+4 
+---------
+
 
 
 
