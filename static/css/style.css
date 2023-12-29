@@ -17,34 +17,19 @@ html {
     position: fixed;
     z-index: -1;
     opacity: 0.7;
-    transform: scale(2) rotate(-10deg) translateY(-0px)
+    transform: scale(1)
 }
 
 .background_plot {
-    top: 1000px;   
-    left: 350px; 
-}
-
-.background_nn {
-    top: 300px;   
-    left: 100px; 
-}
-
-.background_tree {
-    top: 100px;   
-    right: 100px; 
-    transform: scale(2) rotate(30deg) translateY(-0px)
-}
-
-.background_atom {
-    top: 1100px;   
-    right: 350px; 
-}
-
-.background_eraser {
-    top: 50%;
-    left: 40%;
-    transform: scale(1.8) rotate(30deg) translateY(-0px)
+    top: 0px;
+    left: 0px;
+    transform: scale(1)
+    width: 100%;    /* Make the image take up the full width of its container */
+    height: auto;   /* Keep the image's aspect ratio */
+    display: block; /* Remove any extra space below the image */
+    max-width: 100vw;
+    margin: 0; /* Remove default margin */
+    background-position: center; /* Centers the image */
 }
 
 .GradientBackground {
