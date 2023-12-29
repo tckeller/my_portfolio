@@ -63,8 +63,56 @@ might help. Talk to your stakeholders often. They know much better than you what
 
 Of course often you do end up needing some kind of model, but don't be the hammer that sees everything as a nail.
 
-4 
----------
+4 Visualization is Key
+--------------------
+
+Your stakeholders are likely not statisticians. This means in order for your groundbreaking
+discovery to fall an fertile ground, you need to do more than to present them with more than
+a p-value of 10e-100 you need to show them something that is simple to understand and clearly
+shows the effect you proved exists.
+
+This is an art form, and way harder than you might initially think. Just throwing your data
+into your favorite plotting library and presenting the first plot you could think of will probably not cut it.
+
+My favorite example for this is the plot that was published by the LHC Atlas team to show that the Higgs particle was discovered.
+The underlying physics would take very long to explain, but any laymen can look at the plot and immediately see "There's a bump there!"
+Which is the one important information the plot aims to convey. ()
+
+<img src="/static/article_images/higgs_bump.png" alt="Gaussian Distribution" width="40%"/>
+
+*(source: [https://higgs.ph.ed.ac.uk/higgs/](https://higgs.ph.ed.ac.uk/higgs/))*
+
+
+This is not the place to do a deep dive. But here are a few rules I like to follow:
+1. Your plot should show exactly one thing.
+2. Reduce complexity. Scatter plots are great for initial EDA, but if you discovered something it makes much more sense to
+   present it in a isolated histogram.
+2. Give context (It doesn't tell me anything that the temperature today is 20C without the context that last year it was 10C)
+3. Take time labelling your axes and legend with meaningful names and Units.
+4. No 3D plots .... EVER! (Sorry ... not sorry)
+
+Do not neglect visualization by focussing only on the machine learning part of data science.
+Statistics and visualization is the foundation everything else is built on. Remove them and
+any ML work you do becomes worthless.
+
+5 Gather Domain Knowledge
+-----------------------
+
+I blame this one on the name "Data Scientist". Every scientist is working with data, but you are working in a
+specific field. Maybe you work for a telecommunications company making you a "Telecommunications Scientist" or
+you could be a "Sales Scientist" somewhere else. This broad label exists in no other field.
+No one would hire an Mechanical Engineer to build a highrise building, you want a civil engineer for that.
+
+It's easy to tell yourself 'I don't need to understand the underlying domain, I'll simply work with the data I get'
+But you'd be wrong. Your domain existed way before our profession was invented, and people used scientific
+methods to optimize the business already back then.
+
+It is worth getting to know how everything in your domain works, and why things are done the way they are.
+Instead of starting from nothing, you instead build on a large set of knowledge build up by your predecessors.
+This will help enourmeously in interpreting your results, selecting features and understanding the limitations
+of your work.
+
+Learn as much as you can from your non-Data Science collegues and thank me later. 
 
 
 

@@ -21,24 +21,30 @@ html {
 }
 
 .background_plot {
-    top: 1000px;    /* Adjust as needed */
-    left: 350px;  /* Adjust as needed */
+    top: 1000px;   
+    left: 350px; 
 }
 
 .background_nn {
-    top: 300px;    /* Adjust as needed */
-    left: 100px;  /* Adjust as needed */
+    top: 300px;   
+    left: 100px; 
 }
 
 .background_tree {
-    top: 100px;    /* Adjust as needed */
-    right: 100px;  /* Adjust as needed */
+    top: 100px;   
+    right: 100px; 
     transform: scale(2) rotate(30deg) translateY(-0px)
 }
 
 .background_atom {
-    top: 1100px;    /* Adjust as needed */
-    right: 350px;  /* Adjust as needed */
+    top: 1100px;   
+    right: 350px; 
+}
+
+.background_eraser {
+    top: 50%;
+    left: 40%;
+    transform: scale(1.8) rotate(30deg) translateY(-0px)
 }
 
 .GradientBackground {
@@ -63,20 +69,21 @@ table {
 .blog-link {
     transition: transform 0.2s, box-shadow 0.2s, border 0.2s; /* This ensures the hover effect is smooth */
     display: block; /* This ensures the entire link area is clickable */
+    transition: transform 0.3s ease-in-out;
 }
 
 .blog-link:hover {
-    transform: scale(1.01); /* Slightly enlarges the card when hovered */
+    transform: scale(1.05); /* Slightly enlarges the card when hovered */
 }
 
 .codehilite {
-    border-radius: 8px;   /* Adjust as needed */
+    border-radius: 8px;  
     overflow: hidden;     /* This will ensure that the rounded corners are applied properly */
 }
 
 .codehilite pre {
-    padding: 15px;        /* Adjust as needed */
-    border-radius: 8px;   /* Adjust as needed */
+    padding: 15px;       
+    border-radius: 8px;  
 }
 
 .link-anchor{
