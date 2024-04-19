@@ -46,14 +46,14 @@ table {
 
 .navbar {
     /*background:  rgba(245,245,245,1);*/
-    background-color: rgba(255, 255, 255, 1);
+    background-color: rgba(245, 245, 245, 1);
     border-bottom: 3px;
     z-index: 1000;
     /* height: 80px; */
 }
 
 .TextBox {
-    background-color: rgba(255, 255, 255, 1);
+    background-color: rgba(245, 245, 245, 1);
 }
 
 .blog-link {

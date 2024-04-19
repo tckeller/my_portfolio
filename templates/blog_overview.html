@@ -16,14 +16,13 @@
     <div class="container pt-1 content">
 
 
-        <div class="row mt-0">
-            <div class="col m-md-3 bg-white rounded m-2 shadow p-0">
-                <div class="row m-5 align_title_and_search">
+        <div class="row mt-4">
+                <div class="mb-4 rounded shadow-sm p-5 NormalText TextBox align_title_and_search">
                     <h2 class="p-0 Title fs-1 mtb-3 col">blog</h2>
                     <input type="text" id="articleSearch" onkeyup="articleSearchFunction()" placeholder="Search..." class="form-control w-50 col">
                 </div>
-                <hr class="gradient_ruler">
-                <div class="m-md-5 p-4 NormalText">
+
+                <div class="mb-4 rounded shadow-sm p-5 NormalText TextBox">
                     {% for article_name in article_names %}
                     <a href="/blog/article?article_name={{ article_name.2 }}" class="searched_element blog-link mb-3 shadow border-0 text-decoration-none text-dark card card-body bg-white">
                         <div class="row mb-0"><div class="col text-left SubTitle searched_name">{{ article_name.1 }}</div><div class="col-3 me-3 text-end NormalText">{{ article_name.0 }}</div></div>
@@ -32,6 +31,5 @@
                 </div>
             </div>
         </div>
-    </div>
 </body>
 </html>
