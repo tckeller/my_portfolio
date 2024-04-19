@@ -13,7 +13,7 @@
 
 <div class="container pt-1 content">
     <div class="row mt-4">
-        <div class="mb-4 rounded shadow-sm p-5 NormalText TextBox">
+        <div class="mb-4 col-md-6 col-sm-12 rounded p-5 NormalText TextBox">
             <h2 class="p-0 Title fs-1 mb-3">Welcome</h2>
             Welcome to my virtual living room. Sit down and make yourself at home.
             Would you'd like a coffee? This place is supposed to be a creative outlet for me and
@@ -26,10 +26,9 @@
             <i>Let's see where the journey goes...</i>
         </div>
 
-        <div class="mb-4 ms-lg-5 rounded shadow-sm p-5 NormalText TextBox">
-            <h2 class="p-0 Title fs-1 mb-3">ml expert / tech lead</h2>
-            I'm Tim Keller, and I have been working in Data Science for quite a few years now.
-            I've worked for several companies throughout Germany, developing AI tools to support their businesses.
+        <div class="mb-4 col-md-6 col-sm-12 rounded p-5 NormalText TextBox">
+            <h2 class="p-0 Title fs-1 mb-3">tech lead - data</h2>
+            Nice to meet you, I'm Tim, and I have been working in Data for quite a few years now.
             My experience ranges from prediction and recommendation to anomaly detection and NLP - you name it,
             and I've likely tackled it at least once. I pride myself not just on being able to write rudimentary
             scripts to get a PoC running, but on being capable of building an entire application,
@@ -39,7 +38,9 @@
             I am the tech lead of a team of amazing individuals, whom I am striving to support as well as I can.
         </div>
 
-        <div class="mb-4 rounded shadow-sm p-5 NormalText TextBox">
+        <div class="gradient_ruler"></div>
+
+        <div class="mb-4 mse-4 rounded p-5 NormalText TextBox">
             <h2 class="p-0 Title fs-1 mb-3">recent blog articles</h2>
             {% for article_name in article_names %}
             <a href="/blog/article?article_name={{ article_name.2 }}" class=" blog-link mb-3 shadow-sm bg-primary outline-1 border-0 text-decoration-none text-dark card card-body bg-white">
@@ -49,9 +50,10 @@
             <a class="h3 SubTitle nav-link p-0 pt-2 font-weight-bold" href="/blog" role="button">more articles</a>
         </div>
 
+        <div class="gradient_ruler"></div>
         <span class="link-anchor" id="examples"></span>
 
-        <div class="mb-4 ms-lg-5 rounded shadow-sm p-5 NormalText TextBox">
+        <div class="mb-4 mse-4 rounded p-5 NormalText TextBox">
             <h2 class="p-0 Title fs-1 mb-3">recent projects</h2>
             <div class="container mt-5">
                 <div class="row row-cols-1 row-cols-md-3 g-4">
@@ -71,9 +73,10 @@
             </div>
         </div>
 
+        <div class="gradient_ruler"></div>
         <span class="link-anchor" id="ContactMe"></span>
 
-        <div class="mb-4 rounded shadow-sm p-5 NormalText TextBox">
+        <div class="mb-4 mse-4 rounded p-5 NormalText TextBox">
             <span class="col p-0 pe-5 Title fs-1 align-middle">contact me: </span>
             <a href="https://www.linkedin.com/in/tim-keller-839032102/" class="float-left">
                 <img src="/static/images/LinkedIn_icon.svg" alt="LinkedIn">
