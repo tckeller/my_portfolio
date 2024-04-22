@@ -114,13 +114,14 @@ table {
     font-style: bold;
     margin-bottom: 0;
     margin-right: 0px;
-    line-height: 80%;
+    line-height: normal;
 }
 
 .SubTitle {
     font-family: 'Major Mono Display', monospace;
     font-size: 22px;
     font-style: italic;
+    line-height: normal;
 }
 
 .NormalText {
@@ -144,9 +145,8 @@ table {
 .gradient_ruler {
   /* background: linear-gradient(to right, red, yellow); */
   background: #ffffff;
-  border: 4px solid white;
   border-radius: 30px;
-  height: 6px;
+  height: 3px;
   width: 40%;
   margin: auto;
   opacity: 1;
