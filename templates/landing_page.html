@@ -45,7 +45,7 @@
             <h2 class="p-0 Title fs-1 mb-3">recent blog articles</h2>
             {% for article_name in article_names %}
             <a href="/blog/article?article_name={{ article_name.2 }}" class=" blog-link mb-3 shadow-sm bg-primary outline-1 border-0 text-decoration-none text-dark card card-body bg-white">
-                <div class="row mb-0"><div class="col text-left SubTitle">{{ article_name.1 }}</div><div class="col-3 me-3 text-end SubTitle">{{ article_name.0 }}</div></div>
+                <div class="row mb-0"><div class="col text-left SubTitle">{{ article_name.1 }}</div><div class="col-3 me-3 d-lg-block d-none text-end SubTitle">{{ article_name.0 }}</div></div>
             </a>
             {% endfor %}
             <a class="h3 SubTitle nav-link p-0 pt-2 font-weight-bold" href="/blog" role="button">more articles</a>
