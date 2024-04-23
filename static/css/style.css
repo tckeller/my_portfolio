@@ -43,17 +43,17 @@ html {
     z-index: -3; /* Ensure the background stays behind the content */
     background:
         /* Gradient overlay */
-        -webkit-radial-gradient(ellipse at top, rgb(3, 86, 117) 50%, rgb(255,255,255) 200%),
+        -webkit-radial-gradient(ellipse at top, rgb(41, 110, 136) 50%, rgb(255,255,255) 200%),
         /* Ensure solid white background */
         rgb(255,255,255);
     background:
         /* Gradient overlay */
-        -moz-radial-gradient(ellipse at top, rgb(3, 86, 117) 50%, rgb(255,255,255) 200%),
+        -moz-radial-gradient(ellipse at top, rgb(41, 110, 136) 50%, rgb(255,255,255) 200%),
         /* Ensure solid white background */
         rgb(255,255,255);
     background:
         /* Gradient overlay */
-        radial-gradient(ellipse at top, rgb(23, 99, 128) 0%, rgb(255,255,255) 300%),
+        radial-gradient(ellipse at top, rgb(41, 110, 136) 0%, rgb(255,255,255) 300%),
         /* Ensure solid white background */
         rgb(255,255,255);
 }
