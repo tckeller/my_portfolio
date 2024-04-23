@@ -16,9 +16,9 @@ window.addEventListener('scroll', function() {
             var values = currentTransform.match(/matrix\(([^)]+)\)/)[1].split(', ').map(parseFloat);
             values[5] = pixel_scrolled;
             console.log(values[5])
-            parallaxImages[i].style.transform = 'matrix(' + values.join(', ') + ')';
+            parallaxImages[i].style.transform = 'matrix(1, 0, 0, 1, 0,' + pixel_scrolled +')';
         } else {
-            parallaxImages[i].style.transform = 'matrix(0,0,0,0,0,0)';
+            parallaxImages[i].style.transform = 'matrix(1,0,0,1,0,0)';
         }
     }
 });
