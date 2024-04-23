@@ -1,3 +1,4 @@
 github_link;name;description;release_date;thumbnail_path
+https://github.com/tckeller/dstest;DSTest;Reproducable Data Science with Unit-testing; 2024-04-22;images/dstest.png
 https://github.com/tckeller/raytracer;Python Raytracer;Fun project to generate 3D graphics; 2023-12-01;images/raytracer_rabbit.jpg
 https://github.com/tckeller/my_portfolio;This Portfolio;Simple web project using Flask and Bootstrap; 2023-12-01;images/portfolio.png
